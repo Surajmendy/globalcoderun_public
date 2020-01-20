@@ -10,18 +10,33 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-public class Activity_Index extends Activity {
+/*
+@author : SD and the wizard
+@description : This activity would be used for
+multiple instance of creating someting new, eg.
+1. Creating new account
+2. Creating a new post
+3. Creating a new comment or feedback
+4. Creating a new payment order
+
+*/
+
+public class Activity_Inputer extends Activity {
 
 	ImageView iv_img;
 	EditText et_email, et_pswd_0, et_pswd_1;
 	Button bttn_sign_up;
+	
+	//when ever the intent is received,
+	//we would have to check on the intent payload
+	// to see what the new instruction would be.
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		
-		setContentView(R.layout.index_layout);
+		setContentView(R.layout.input_layout);
 		
 		//Reference all relevant ids here 
 		iv_img = (ImageView)findViewById(R.id.iv_img);
@@ -51,7 +66,7 @@ public class Activity_Index extends Activity {
 				&& et_validator_bool (et_pswd_1, et_pswd_min_lnf, et_pswd_max_lnf)
 				&& et_compare(et_pswd_0, et_pswd_1)){
 					
-					Intent main_news_page_intent = new Intent(Activity_Index.this, Activity_MainNewsPage.class);
+					Intent main_news_page_intent = new Intent(Activity_Inputer.this, Activity_MainNewsPage.class);
 					
 					startActivity(main_news_page_intent);
 					

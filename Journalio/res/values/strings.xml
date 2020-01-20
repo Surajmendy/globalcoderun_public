@@ -1,6 +1,6 @@
 <resources>
 
-    <string name="app_name">Journali</string>
+    <string name="app_name">Journalio</string>
     <string name="sign_up_bttn">Sign Up</string>
     <string name="email">E-mail</string>
     <string name="password">Password</string>
@@ -12,5 +12,7 @@
     <string name="my_profile">My Profile</string>
     <string name="dummy_headline">New Story Heading</string>
     <string name="dummy_story_detail">ahofoqejoqijerqierjo jroqiejroiqejrpoiqjerpi qjeprihqpeirhqpeiurhpqoierhpoq ijerpoqijerpio qjpeorijqpoeirjpoq eij</string>
-
+	<string name="new_post">New Post</string>
+    <string name="cancel">Cancel</string>
+	
 </resources>

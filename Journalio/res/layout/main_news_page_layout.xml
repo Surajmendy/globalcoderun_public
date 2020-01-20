@@ -3,50 +3,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/bttn_get_acc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
-        android:text="@string/get_your_account_for_more_features"/>
-
-    <TextView
-        android:id="@+id/tab_0"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/tab_1"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/trending"/>
-    
-    <TextView
-        android:id="@+id/tab_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:text="@string/my_posts"/>
-    
-    <TextView
-        android:id="@+id/tab_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/tab_1"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/my_profile"/>
+    <include
+        android:id="@+id/base_bttns_parent_id"
+        layout="@layout/base_bttns"/>
 
     <TextView
         android:id="@+id/news_hd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/bttn_get_acc"
-        android:layout_below="@+id/tab_0"
+        android:layout_below="@+id/app_header_id"
         android:layout_marginLeft="21dp"
         android:layout_marginTop="38dp"
         android:text="@string/dummy_headline"/>
@@ -61,4 +27,8 @@
         android:layout_marginTop="38dp"
         android:text="@string/dummy_story_detail"/>
 
+    <include
+        android:id="@+id/app_header_id"
+        layout="@layout/app_header"/>
+    
 </RelativeLayout>
