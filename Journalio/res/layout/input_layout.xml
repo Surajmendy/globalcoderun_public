@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/activity_inputer_parent_id"
+    android:id="@+id/activity_inputer_id"
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
     android:background="#ffffff">
@@ -8,8 +8,7 @@
     <ScrollView 
         android:id="@+id/sv_0"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content">
           
     <RelativeLayout
         android:id="@+id/sv_r_0"
