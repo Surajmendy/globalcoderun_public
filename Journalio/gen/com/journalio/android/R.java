@@ -37,6 +37,9 @@ public final class R {
         public static final int nav_rl_0=0x7f060005;
         public static final int nav_rl_1=0x7f060009;
         public static final int nav_rl_2=0x7f06000d;
+        public static final int nav_tv_0=0x7f060006;
+        public static final int nav_tv_1=0x7f06000a;
+        public static final int nav_tv_2=0x7f06000e;
         public static final int nav_v_0=0x7f060007;
         public static final int nav_v_1=0x7f06000b;
         public static final int nav_v_2=0x7f06000f;
@@ -47,9 +50,6 @@ public final class R {
         public static final int sv_outputer_0=0x7f060022;
         public static final int sv_r_0=0x7f060017;
         public static final int sv_r_outputer_0=0x7f060023;
-        public static final int tab_0=0x7f060006;
-        public static final int tab_1=0x7f06000a;
-        public static final int tab_2=0x7f06000e;
         public static final int tab_tv_0=0x7f060008;
         public static final int tab_tv_1=0x7f06000c;
         public static final int tab_tv_2=0x7f060010;
