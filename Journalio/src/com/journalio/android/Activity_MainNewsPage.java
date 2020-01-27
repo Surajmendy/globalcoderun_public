@@ -6,13 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class Activity_MainNewsPage extends Activity {
 
-	TextView tab_1;
+	TextView mypost_tv,trending_tv,myprofile_tv;
 	Button bttn_base_0, bttn_base_1;
 	
 	Context ctx;
@@ -27,7 +28,11 @@ public class Activity_MainNewsPage extends Activity {
 		ctx = Activity_MainNewsPage.this;
 		
 		//Reference ui elements
-		tab_1 = (TextView )findViewById(R.id.nav_tv_1);
+		trending_tv = (TextView)findViewById(R.id.nav_tv_0);
+		mypost_tv = (TextView )findViewById(R.id.nav_tv_1);
+		
+		myprofile_tv = (TextView)findViewById(R.id.nav_tv_2);
+		
 		
 		bttn_base_0=(Button)findViewById(R.id.base_bttn_0);
 		
@@ -35,41 +40,33 @@ public class Activity_MainNewsPage extends Activity {
 		
 		bttn_base_0.setText(getResources().getString(R.string.get_your_account_for_more_features));
 		
-		tab_1.setOnTouchListener(new OnTouchListener() {
-			
-			@Override
-			public boolean onTouch(View v, MotionEvent event) {
-				if(v.getId()==tab_1.getId()) {
-				switch (event.getActionMasked()){
+		//move to my post page when my post button is clicked
+				mypost_tv.setOnClickListener(new OnClickListener() {
 
-  						case MotionEvent.ACTION_DOWN:
-  						case MotionEvent.ACTION_POINTER_DOWN: {
-  							//change color or background  ( new )
-  							break;
-  						}
+				            @Override
+				            public void onClick(View v) {
 
-  						case MotionEvent.ACTION_UP:
-  						case MotionEvent.ACTION_POINTER_UP: {
-  							
-  							//change color to default
-  							
-  							//do the action
-  							Intent activity_Post_intent = new Intent(Activity_MainNewsPage.this, Activity_Poster.class );
-  							startActivity(activity_Post_intent);
-  							
-  							break;
-  						}
-  						case MotionEvent.ACTION_MOVE:{
-  							
-  							//finger moved : deactivate the whole action 
-  							
-  							break;
-  						}
-  					}
-				}
-				return true;
-			}
-		});
+				                     Intent activity_mypost_intent = new Intent(Activity_MainNewsPage.this,Activity_MyPost.class);
+				                     
+				                   //  activity_mypost_intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				                     startActivity(activity_mypost_intent);
+				            }
+				        }); 
+		
+		//move to profile page when profile button is clicked
+		myprofile_tv.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                     Intent activity_profile_intent = new Intent(Activity_MainNewsPage.this,Activity_Profile.class);
+                     
+                    // activity_profile_intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                     startActivity(activity_profile_intent);
+            }
+        }); 
+		
+		
 		
 		for(int x=0; x<3; x++) {
 			
@@ -80,6 +77,7 @@ public class Activity_MainNewsPage extends Activity {
 				nav_V(3, "nav_v_", x).setVisibility(View.VISIBLE);
 			}else{
 				nav_V(3, "nav_v_", x).setVisibility(View.GONE);
+				
 			}
 			
 		}
